@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --clr-softblue: hsl(215, 51%, 70%);
+    --clr-cyan: hsl(178, 100%, 50%);
+    --clr-main-darkblue: hsl(217, 54%, 11%);
+    --clr-card-darkblue: hsl(216, 50%, 16%);
+    --clr-line-darkblue: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-primary: 'Outfit', sans-serif;
+}
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--clr-main-darkblue);
+    width: 100%;
+    height: 100vh;
+    color: var(--clr-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-primary);
+}
+
+.card{
+    background-color: var(--clr-card-darkblue);
+    border-radius: 15px;
+    width: 315px;
+    padding: 1.5rem;
+}
+
+.image{
+    position: relative;
+}
+
+.image div{
+    position: absolute;
+    background-color: hsl(178, 100%, 50%, 60%);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.image div:hover{
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.image div img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.mainImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+h3{
+    margin-top: 1.5rem;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.description{
+    margin: 0.6rem 0 1rem 0;
+    color: var(--clr-softblue);
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.price-days{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--clr-line-darkblue);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    color: var(--clr-cyan);
+    font-size: 14px;
+    letter-spacing: 1px;
+    gap: 0.5em;
+}
+
+.days{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--clr-softblue);
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.creator{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: var(--clr-softblue);
+}
+
+.avatar{
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 1rem;
+    width: 30px;
+}
+
+.creator span{
+    color: var(--clr-white);
+    margin-left: 5px;
+}
+
+.mainImg, h3, span{
+    cursor: pointer;
+}
+
+h3:hover , span:hover{
+    color: var(--clr-cyan);
+}
